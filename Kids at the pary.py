@@ -1,38 +1,37 @@
-# LIBRERIAS
-
 # VARIABLES
 cases = int(input())
+y = []
 
 # BLOQUE
-for i in range(0,cases):
-    if cases >= 1 and cases <= 100:
+if cases >= 1 and cases <= 100:
+    for i in range(0,cases):
         numero = int(input())
-        lista_correctos = []
-        victory = False
-        if (numero > 2 and numero <= 10**500):
-            if numero % 2 == 0:
-                lista_correctos.append(2)
-                victory = True
-            if numero % 3 == 0:
-                lista_correctos.append(3)
-                victory = True
-            if numero % 4 == 0:
-                lista_correctos.append(4)
-                victory = True
-            if numero % 5 == 0:
-                lista_correctos.append(5)
-                victory = True
-            if numero % 6 == 0:
-                lista_correctos.append(6)
-                victory = True
-            if victory == False:
-                lista_correctos.append(-1)
-            
-        else:
-            None
-        print(lista_correctos,end="\n")
+        y.append(numero)
 
-    else:
-        i +=1
-        None
+for element in y:
+    ls_cor = []
+    victory = False
+    if (element > 2 and element <= 10**500):
+        if element % 2 == 0:
+            ls_cor.append(str(2))
+            victory = True
+        if element % 3 == 0:
+            ls_cor.append(str(3))
+            victory = True
+        if element % 4 == 0:
+            ls_cor.append(str(4))
+            victory = True
+        if element % 5 == 0:
+            ls_cor.append(str(5))
+            victory = True
+        if element % 6 == 0:
+            ls_cor.append(str(6))
+            victory = True
+        if victory == False:
+            ls_cor.append(str(-1))
+        print(' '.join(ls_cor))
+       
+
+            
+     
 
