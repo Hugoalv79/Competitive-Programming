@@ -71,5 +71,3 @@ int main() {
  
   cout << ((combinations(M, K) %c) * (almacen % c))%c << "\n";
 }
- 
- 
